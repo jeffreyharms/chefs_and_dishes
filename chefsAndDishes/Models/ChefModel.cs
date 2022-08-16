@@ -1,6 +1,7 @@
 #pragma warning disable CS8618
 
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace chefsAndDishes.Models;
 
@@ -25,4 +26,6 @@ public class Chef
     {
         return FirstName + " " + LastName;
     }
+    [NotMapped]
+    public int Age { get; set; }
 }

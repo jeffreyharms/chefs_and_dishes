@@ -1,8 +1,8 @@
 @model List<Dish>
 
-<h1>Yum, take a look at our tasty</h1>
-
 <a href="/dishes/new">Create a new dish!</a>
+<h1>Yum, take a look at our tasty Dishes!</h1>
+
 <div class="container">
     <table class="table">
         <tr class="table">
@@ -15,7 +15,7 @@
         {
             <tr class="table">
                 <td class="table">@dish.Name</td>
-                <td class="table">@dish.ChefId</td>
+                <td class="table">@dish.Creator.FirstName @dish.Creator.LastName</td>
                 <td class="table">@dish.Tastiness</td>
                 <td class="table">@dish.Calories</td>
             </tr>
