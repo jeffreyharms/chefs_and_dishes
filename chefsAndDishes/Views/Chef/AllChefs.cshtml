@@ -1,0 +1,22 @@
+@model List<Chef>
+
+
+<a href="/chefs/new">Create a new Chef!</a>
+<div class="container">
+    <h1>Check out our roster of chefs!</h1>
+    <table class="table">
+        <tr class="table">
+            <th class="table">Name</th>
+            <th class="table">Age</th>
+            <th class="table"># of Dishes</th>
+        </tr>
+        @foreach (Chef chef in Model)
+        {
+            <tr class="table">
+                <td class="table">@chef.FullName()</td>
+                <td class="table">@chef.DOB</td>
+                <td class="table">@chef.CreatedDishes.Count()</td>
+            </tr>
+        }
+    </table>
+</div>
